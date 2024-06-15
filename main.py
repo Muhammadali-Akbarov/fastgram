@@ -20,16 +20,6 @@ from app.bot.settings.internal.conf.bot import IS_WEBHOOK_ENABLED
 app = fastapi.FastAPI()
 
 
-async def main() -> None:
-    """
-    entrypoint of running bot operations
-    """
-    # run migrations
-    if IS_WEBHOOK_ENABLED is False:
-        await bot.delete_webhook(drop_pending_updates=True)
-        await handler.dp.start_polling(bot)
-
-
 @app.on_event("startup")
 async def startup_event():
     """
