@@ -73,10 +73,6 @@ async def on_shutdown():
     """
     shutdown events.
     """
-    await bot.send_message(
-        chat_id=NOTIFICATION_ID,
-        text="🔥️️️️️️ Bot has been down"
-    )
     await bot.session.close()
 
 
