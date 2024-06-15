@@ -1,4 +1,4 @@
-# Master Kebab Client Bot
+# Fastgram template
 
 # Installation
 * 1 - clone repo 
