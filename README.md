@@ -9,6 +9,18 @@
   - ```make setup```
 
 
+## Technologies Used
+Fastgram is built using the following technologies:
+- **FastAPI**: A modern, fast (high-performance) web framework for building APIs with Python 3.6+ based on standard Python type hints.
+- **aiogram 3**: An asynchronous framework for Telegram Bot API based on asyncio and aiohttp.
+- **SQLAlchemy**: The Python SQL toolkit and Object-Relational Mapping (ORM) library.
+- **PostgreSQL**: A powerful, open-source object-relational database system.
+- **Redis**: An in-memory data structure store, used as a database, cache, and message broker.
+- **Celery**: An asynchronous task queue/job queue based on distributed message passing.
+
+This combination of technologies ensures that Fastgram is robust, scalable, and ready for production environments.
+
+
 ```
 (fastgram) 🚀 fastgram % tree app/bot/services/external/aiogram
 app/bot/services/external/aiogram
@@ -35,9 +47,6 @@ app/bot/services/external/aiogram
 ├── shortcut
 │   ├── __init__.py
 │   ├── action.py
-│   ├── btns.py
-│   ├── location.py
-│   ├── message.py
 │   └── schema.py
 ├── state
 │   ├── __init__.py
@@ -45,6 +54,5 @@ app/bot/services/external/aiogram
 └── storage
     ├── __init__.py
     └── fsm.py
-
-10 directories, 24 files
 ```
+
