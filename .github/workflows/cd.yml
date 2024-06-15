@@ -19,6 +19,6 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd /home/jasur/mk_client_bot
+            cd /home/user/fastgram
             git pull origin main
-            systemctl restart mk_client_bot.service
+            systemctl restart fastgram.service

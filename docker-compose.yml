@@ -31,6 +31,14 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
 
+  celery_worker:
+    build: .
+    command: celery -A app.bot.services.external.celery.tasks worker --loglevel=info --concurrency=1 --queues=example_queue
+
+  celery_beat:
+    build: .
+    command: celery -A app.bot.services.external.celery.tasks beat -l INFO
+
 volumes:
   db_data:
   redis_data:
