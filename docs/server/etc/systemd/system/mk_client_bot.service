@@ -1,0 +1,14 @@
+[Unit]
+Description=Docker Compose Application Service
+Requires=docker.service
+After=docker.service
+
+[Service]
+WorkingDirectory=/home/jasur/mk_client_bot
+ExecStart=docker-compose up --build
+ExecStop=docker-compose down
+Restart=always
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target

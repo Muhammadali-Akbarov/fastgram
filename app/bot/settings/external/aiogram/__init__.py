@@ -1,0 +1,3 @@
+"""
+init bot settings
+"""

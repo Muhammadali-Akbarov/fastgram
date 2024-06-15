@@ -1,0 +1,24 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd /home/jasur/mk_client_bot
+            git pull origin main
+            systemctl restart mk_client_bot.service
