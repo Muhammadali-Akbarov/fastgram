@@ -1,5 +1,7 @@
 # Fastgram template
 
+Support Group - <a href="https://t.me/+bYouuOlqt1c3NmYy">Telegram</a><br>
+
 # Installation
 * 1 - clone repo 
   - ```git clone git@github.com:Muhammadali-Akbarov/fastgram.git```
