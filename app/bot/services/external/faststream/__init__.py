@@ -19,6 +19,7 @@ class FastStreamPubSub(IPubSub):
     async def publish(self, topic, message):
         await broker.connect()
         await broker.publish(topic, message)
+        await broker.close()
 
 
 client = FastStreamPubSub()
