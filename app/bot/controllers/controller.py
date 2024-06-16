@@ -54,15 +54,6 @@ class AppController(IAppController):
             client=client
         )
 
-    async def set_user_info(self, user_id, chat_id, phone, lat, long):
-        return await self.repository.set_user_info(
-            user_id=user_id,
-            chat_id=chat_id,
-            phone=phone,
-            lat=lat,
-            long=long
-        )
-
     async def swich_state(self, chat_id, state):
         return await self.repository.swich_state(chat_id, state)
 

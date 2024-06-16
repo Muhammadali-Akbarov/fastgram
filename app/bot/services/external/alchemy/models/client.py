@@ -21,7 +21,6 @@ class Client(Base):
     username = Column(String, unique=True)  # Ensure unique usernames
     first_name = Column(String, nullable=True)
     last_name = Column(String, nullable=True)
-    user_id = Column(BigInteger, nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
     lang = Column(String, default="ru", nullable=True)
@@ -98,35 +97,6 @@ async def get_user_lang(
             return user.lang
 
         return "uz"
-
-
-async def set_user_info(
-    user_id: int,
-    chat_id: int,
-    phone: int,
-    lat: float,
-    long: float
-):
-    """
-    This function sets the user
-    information including phone, latitude, and longitude.
-    """
-    with Session() as session:
-        user = session.query(Client).filter_by(
-            id=chat_id
-        ).first()
-        print("user_id", user_id)
-
-        if user:
-            user.user_id = user_id
-            user.latitude = lat
-            user.longitude = long
-            user.phone = phone
-            session.commit()
-
-            return True
-
-        return False
 
 
 async def swich_state(

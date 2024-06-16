@@ -18,11 +18,6 @@ class AlchemyRepository(abstract.IRepository):
     async def get_user_lang(self, client: models.Client):
         return await models.get_user_lang(client)
 
-    async def set_user_info(self, user_id, chat_id, phone, lat, long):
-        return await models.set_user_info(
-            user_id, chat_id, phone, lat, long
-        )
-
     async def swich_state(self, chat_id, state):
         return await models.swich_state(chat_id, state)
 

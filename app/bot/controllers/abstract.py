@@ -42,13 +42,6 @@ class IAppController(abc.ABC):
         raise NotImplementedError("set_user_lang not implemented")
 
     @abc.abstractmethod
-    async def set_user_info(self, user_id, chat_id, phone, lat, long):
-        """
-        set user info interface
-        """
-        raise NotImplementedError("set_user_info not implemented")
-
-    @abc.abstractmethod
     async def swich_state(self, chat_id, state):
         """
         set swich_state interface
