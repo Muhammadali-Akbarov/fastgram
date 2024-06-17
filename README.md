@@ -34,7 +34,21 @@ This combination of technologies ensures that Fastgram is robust, scalable, and 
 (fastgram) 🚀 fastgram % tree app/bot/services/external/aiogram
 app/bot/services/external/aiogram
 ├── __init__.py
-├── button
+├── enum
+│   ├── __init__.py
+│   └── state.py
+├── filter
+│   ├── __init__.py
+│   ├── chat.py
+│   ├── payment.py
+│   └── text.py
+├── handler
+│   ├── __init__.py
+│   ├── echo.py
+│   ├── example.py
+│   └── start.py
+├── keyboard
+│   ├── __init__.py
 │   ├── inline
 │   │   ├── __init__.py
 │   │   ├── create.py
@@ -43,16 +57,12 @@ app/bot/services/external/aiogram
 │       ├── __init__.py
 │       ├── create.py
 │       └── default.py
-├── enums
-│   ├── __init__.py
-│   └── state.py
-├── handler
-│   ├── __init__.py
-│   ├── echo.py
-│   └── start.py
 ├── middleware
 │   ├── __init__.py
 │   └── lang.py
+├── router
+│   ├── __init__.py
+│   └── prepare.py
 ├── shortcut
 │   ├── __init__.py
 │   ├── action.py
