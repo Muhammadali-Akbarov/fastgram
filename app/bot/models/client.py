@@ -18,7 +18,7 @@ class Client(BaseModel):
     longitude: typing.Optional[float] = Field(default=None)
 
 
-async def build_client(message):
+async def build_client(message) -> Client:
     """
     builds a client
     """
