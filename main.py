@@ -11,8 +11,8 @@ from app.bot.presentation import router
 from app.bot.settings.internal.conf import port
 from app.bot.services.external.aiogram import bot
 from app.bot.services.external.alchemy import models
-from app.bot.services.external.aiogram import handler
 from app.bot.services.external.alchemy import engine
+from app.bot.services.external.aiogram import dispatcher as dp
 from app.bot.settings.internal.conf.bot import NOTIFICATION_ID
 from app.bot.settings.internal.conf.bot import IS_WEBHOOK_ENABLED
 
@@ -55,7 +55,7 @@ async def startup_event():
             chat_id=NOTIFICATION_ID,
             text="✅ Bot has been started with polling mode"
         )
-        await handler.dp.start_polling(bot)
+        await dp.start_polling(bot)
 
 
 @app.on_event("shutdown")

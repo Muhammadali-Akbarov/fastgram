@@ -2,8 +2,8 @@
 the webhook handler for getting bot updates
 """
 from app.bot.services.external.aiogram import bot
-from app.bot.services.external.aiogram.handler import dp
 from app.bot.services.external.aiogram import aiogram
+from app.bot.services.external.aiogram import dispatcher as dp
 
 
 async def updates_hander(request: dict):

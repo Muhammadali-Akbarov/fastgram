@@ -1,23 +1,17 @@
 """
 init aiogram
 """
-from aiogram import F
 from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
 
-from app.bot.services.external.aiogram.button import markup
-from app.bot.services.external.aiogram import dispatcher as dp
+from app.bot.services.external.aiogram.keyboard import markup
 
 
 btns: list[str] = ["🇺🇿 O'zbek tili", "🇷🇺 Русский язык"]
 buttons = markup.genmarkup(btns=btns, schema=[2])
 
 
-@dp.message(
-    (F.text == "/start") |
-    (F.text == "🌐 Выбрать язык")
-)
-async def start(message: Message, state: FSMContext, lang) -> None:
+async def start_handler(message: Message, state: FSMContext, lang) -> None:
     """
     handler will forward receive a message back to the sender
     """
