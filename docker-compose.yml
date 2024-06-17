@@ -18,12 +18,17 @@ services:
   redis:
     image: redis:latest
     container_name: redis
+    ports:
+      - 6379:6379
     volumes:
       - redis_data:/data
 
   db:
     image: postgres:14
     container_name: postgres_db
+    ports:
+      - 5432:5432
+
     environment:
       POSTGRES_DB: ${DB_NAME}
       POSTGRES_USER: ${DB_USERNAME}

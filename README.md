@@ -8,7 +8,14 @@ Support Group - <a href="https://t.me/+bYouuOlqt1c3NmYy">Telegram</a><br>
 * 2 - Setting up environment variables
   - ```cp .env.dist .env```
 * 3 - RUN Project the following commands
-  - ```make setup```
+  - ```make run.image``` - run with docker
+* 4 - Run the following commands without docker
+  - ```python3 -m venv venv```
+  - ```source venv/bin/activate``` or ```./venv/scripts/activate```
+  - ```pip3 install -r requirements.txt```
+  - ```uvicorn main:app --port ${SERVICE_PORT}``` run bot
+  - ```celery -A app.bot.services.external.celery.tasks worker -l INFO``` run celery worker
+  - ```celery -A app.bot.services.external.celery.tasks beat -l INFO``` run celery beat
 
 
 ## Technologies Used
