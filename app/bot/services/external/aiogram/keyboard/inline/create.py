@@ -4,7 +4,7 @@ inline button creator
 from aiogram.types import InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
-from app.bot.services.external.aiogram.button.inline.default import constructor # noqa
+from app.bot.services.external.aiogram.keyboard.inline.default import constructor # noqa
 
 
 def genmarkup(keyboard_data: dict):

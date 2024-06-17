@@ -1,7 +1,7 @@
 """
 create markup utility function
 """
-from app.bot.services.external.aiogram.button.markup.default import constructor # noqa
+from app.bot.services.external.aiogram.keyboard.markup.default import constructor # noqa
 
 
 def genmarkup(btns: list[str], schema):
