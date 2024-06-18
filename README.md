@@ -11,7 +11,7 @@ Support Group - <a href="https://t.me/+bYouuOlqt1c3NmYy">Telegram</a><br>
   - ```make run.image``` - run with docker
 * 4 - Run the following commands without docker
   - ```python3 -m venv venv```
-  - ```source venv/bin/activate``` or ```./venv/scripts/activate```
+  - ```source venv/bin/activate``` or ```./venv/Scripts/activate```
   - ```pip3 install -r requirements.txt```
   - ```uvicorn main:app --port ${SERVICE_PORT}``` run bot
   - ```celery -A app.bot.services.external.celery.tasks worker -l INFO``` run celery worker
