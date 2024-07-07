@@ -18,7 +18,7 @@ Support Group - <a href="https://t.me/+bYouuOlqt1c3NmYy">Telegram</a><br>
   - ```celery -A app.bot.services.external.celery.tasks beat -l INFO``` run celery beat
 
 
-## Technologies Used
+## Architecture Overview
 Fastgram is built using the following technologies:
 - **FastAPI**: A modern, fast (high-performance) web framework for building APIs with Python 3.6+ based on standard Python type hints.
 - **aiogram 3**: An asynchronous framework for Telegram Bot API based on asyncio and aiohttp.
@@ -26,6 +26,7 @@ Fastgram is built using the following technologies:
 - **PostgreSQL**: A powerful, open-source object-relational database system.
 - **Redis**: An in-memory data structure store, used as a database, cache, and message broker.
 - **Celery**: An asynchronous task queue/job queue based on distributed message passing.
+- **FastStream**: For pub/sub messaging.
 
 This combination of technologies ensures that Fastgram is robust, scalable, and ready for production environments.
 
